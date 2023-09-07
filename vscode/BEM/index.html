@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>BEM </title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div>
+        <button href="" class="btn btn--small btn--success btn--size">GO TO NEXT APPROVAL</button>
+        <button href="" class="btn btn--small btn--warn">OK </button>
+        <button href="" class="btn btn--small btn--danger">TRY AGAIN</button>
+    </div>
+   <div>
+    <button href="" class="btn btn--success btn--size">GO TO NEXT APPROVAL</button>
+    <button href="" class="btn btn--warn">OK </button>
+    <button href="" class="btn btn--danger">TRY AGAIN</button>
+   </div>
+   <div>
+    <button href="" class="btn btn--large btn--success btn--size">GO TO NEXT APPROVAL</button>
+    <button href="" class="btn btn--large btn--warn">OK </button>
+    <button href="" class="btn btn--large btn--danger">TRY AGAIN</button>
+   </div>
+   <!-- Success -->
+   <div id="toast">
+      <div class="toast toast--success">
+    <div class="toast__icon">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+    </div>
+    <div class="toast__body">
+       <h3 class="toast__title">Success</h3>
+       <p class="toast__msg">Anyone with access can view your invited visitors</p>
+    </div>
+    <div class="toast__close">
+        <ion-icon name="close-sharp"></ion-icon>
+    </div>
+
+   </div>
+   </div>
+ 
+   <!-- Info -->
+   <div>
+    <div class="toast toast--info">
+  <div class="toast__icon">
+      <ion-icon name="checkmark-circle"></ion-icon>
+  </div>
+  <div class="toast__body">
+     <h3 class="toast__title">Success</h3>
+     <p class="toast__msg">Anyone with access can view your invited visitors</p>
+  </div>
+  <div class="toast__close">
+      <ion-icon name="close-sharp"></ion-icon>
+  </div>
+
+ </div>
+ </div>
+
+ <!-- Warning -->
+ <div>
+    <div class="toast toast--warning">
+  <div class="toast__icon">
+      <ion-icon name="checkmark-circle"></ion-icon>
+  </div>
+  <div class="toast__body">
+     <h3 class="toast__title">Success</h3>
+     <p class="toast__msg">Anyone with access can view your invited visitors</p>
+  </div>
+  <div class="toast__close">
+      <ion-icon name="close-sharp"></ion-icon>
+  </div>
+
+ </div>
+ </div>
+
+ <!-- Error -->
+ <div>
+    <div class="toast toast--error">
+  <div class="toast__icon">
+      <ion-icon name="checkmark-circle"></ion-icon>
+  </div>
+  <div class="toast__body">
+     <h3 class="toast__title">Success</h3>
+     <p class="toast__msg">Anyone with access can view your invited visitors</p>
+  </div>
+  <div class="toast__close">
+      <ion-icon name="close-sharp"></ion-icon>
+  </div>
+
+ </div>
+ </div>
+ <div class="btn btn--success">Show success </div>
+ <div class="btn btn--danger">Show danger</div>
+ <script>
+    function toast({title='',message='',type='info',duration=3000}){  
+     const main=document.getElementById('toast');
+      if(main){
+        const toast= document.createElement('div');
+        toast.classList.add('toast');
+        toast.innerHTML=`
+        <div class="toast__icon">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+    </div>
+    <div class="toast__body">
+       <h3 class="toast__title">Success</h3>
+       <p class="toast__msg">Anyone with access can view your invited visitors</p>
+    </div>
+    <div class="toast__close">
+        <ion-icon name="close-sharp"></ion-icon>
+    </div>
+        `;
+        main.appendChild(toast);
+
+      } }
+
+    toast({
+        title:'Success',
+        message:'Anyone with access can view your invited visitors',
+        type:'Success',
+        duration:3000
+    })
+ </script>
+ <div class="header">
+    <div class="navbar">
+        <div class="navbar__item"></div>
+        <div class="navbar__item"></div>
+        <div class="navbar__item"></div>
+    </div>
+    <div class="top--search">
+        <div class="top--search__input"></div>
+        <div class="top--search__output"></div>
+        <div class="top--search__btn"></div>
+
+        <div class="search-suggest">
+            <div class="search-suggest__child"></div>
+        </div>
+    </div>
+ </div>
+</body>
+</html>
